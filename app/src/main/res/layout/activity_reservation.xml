@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/noInternet"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/couponButton"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:onClick="coupon"
+        android:text="Kupon rabatowy"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attraction" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="255dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hotel_java" />
+
+    <Button
+        android:id="@+id/addReservation"
+        android:layout_width="295dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:onClick="newReservation"
+        android:text="Nowa rezerwacja"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/attraction"
+        android:layout_width="295dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:onClick="attraction"
+        android:text="Dostępne atrakcje"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addReservation" />
+
+    <Button
+        android:id="@+id/restaurant"
+        android:layout_width="295dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:onClick="goToRestaurant"
+        android:text="Restauracja"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/couponButton" />
+
+    <Button
+        android:id="@+id/aboutUs"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:onClick="aboutUs"
+        android:text="O nas"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant" />
+
+    <Button
+        android:id="@+id/signOut"
+        android:layout_width="295dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:onClick="LogOut"
+        android:text="Wyloguj się"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutUs" />
+</androidx.constraintlayout.widget.ConstraintLayout>
