@@ -11,11 +11,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/noInternet"
         tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/loginButton"
         android:layout_width="201dp"
         android:layout_height="0dp"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="48dp"
         android:onClick="loginToApp"
         android:text="Logowanie"
         android:textAllCaps="false"
@@ -28,7 +29,7 @@
         android:id="@+id/reservationButton"
         android:layout_width="201dp"
         android:layout_height="0dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:onClick="doReservation"
         android:text="Dokonaj rezerwacje"
         android:textAllCaps="false"
@@ -36,6 +37,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+
+    <Button
+        android:id="@+id/reservationButton2"
+        android:layout_width="201dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        android:onClick="doReservation"
+        android:text="Zadaj pytanie"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reservationButton" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -51,12 +65,12 @@
         android:id="@+id/button2"
         android:layout_width="201dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Wyjdz z aplikacji"
+        android:layout_marginTop="36dp"
         android:onClick="exitApp"
+        android:text="Wyjdz z aplikacji"
         android:textAllCaps="false"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservationButton" />
+        app:layout_constraintTop_toBottomOf="@+id/reservationButton2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
