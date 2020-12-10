@@ -42,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         Toast.makeText(getApplicationContext(),"Proszę czekać...",Toast.LENGTH_SHORT).show();
     }
+    //Go to chat
+    public void openChat(View view) {
+        Intent intent = new Intent(MainActivity.this,ChatActivity.class);
+        startActivity(intent);
+        Toast.makeText(getApplicationContext(),"Proszę czekać...",Toast.LENGTH_SHORT).show();
+    }
     //Exit app
     public void exitApp(View view) {
         finishAffinity();

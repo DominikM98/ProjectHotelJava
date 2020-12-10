@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HotelManagementApp</string>
+    <string name="main_loginBtn">Logowanie</string>
+    <string name="main_reservBtn">Dokonaj rezerwacje</string>
+    <string name="main_askBtn">Zadaj pytanie</string>
+    <string name="main_quit">Wyjdz z aplikacji</string>
+</resources>
