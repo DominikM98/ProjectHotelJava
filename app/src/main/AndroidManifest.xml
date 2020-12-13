@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hotelmanagementapp">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,13 +14,6 @@
         <activity android:name=".paymentActivity" />
         <activity android:name=".createReservationLoginActivity" />
         <activity android:name=".OrderDetails" />
-        <activity android:name=".menu.AlcoholActivity" />
-        <activity android:name=".menu.DessertsActivity" />
-        <activity android:name=".menu.DrinksActivity" />
-        <activity android:name=".menu.PastaActivity" />
-        <activity android:name=".menu.DumplingsActivity" />
-        <activity android:name=".menu.MainDishesActivity" />
-        <activity android:name=".menu.SoupActivity" />
         <activity android:name=".SnapActivity" />
         <activity android:name=".createReservationActivity" />
         <activity android:name=".attractionActivity" />
@@ -27,6 +21,10 @@
         <activity android:name=".reservationActivity" />
         <activity android:name=".forgotActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".settingActivity" />
+        <activity android:name=".Contact"/>
+        <activity android:name=".HowToGet"/>
+        <activity android:name=".ContactSection"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +32,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

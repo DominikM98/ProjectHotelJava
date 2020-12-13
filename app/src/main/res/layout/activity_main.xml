@@ -4,35 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/hotel_outside">
 
     <WebView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/noInternet"
         tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="201dp"
+        android:layout_width="300dp"
         android:layout_height="0dp"
         android:layout_marginTop="58dp"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/allerta"
         android:onClick="loginToApp"
         android:text="Logowanie"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textColor="#120000"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/reservationButton"
-        android:layout_width="201dp"
+        android:layout_width="300dp"
         android:layout_height="0dp"
         android:layout_marginTop="40dp"
+        android:background="@drawable/gradient"
         android:onClick="doReservation"
         android:text="Dokonaj rezerwacje"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textColor="#120000"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton" />
@@ -49,13 +58,16 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="201dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Wyjdz z aplikacji"
+        android:background="@drawable/gradient"
         android:onClick="exitApp"
+        android:text="Wyjdz z aplikacji"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textColor="#120000"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reservationButton" />
