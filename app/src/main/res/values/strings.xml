@@ -28,4 +28,5 @@
     <string name="main_reservBtn">Make Reservation</string>
     <string name="main_askBtn">Ask a question</string>
     <string name="main_quit">Quit</string>
+    <string name="wait">Wait a second…</string>
 </resources>

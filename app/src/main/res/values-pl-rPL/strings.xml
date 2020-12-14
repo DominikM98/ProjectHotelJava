@@ -5,4 +5,5 @@
     <string name="main_reservBtn">Dokonaj rezerwacje</string>
     <string name="main_askBtn">Zadaj pytanie</string>
     <string name="main_quit">Wyjdz z aplikacji</string>
+    <string name="wait">Poczekaj chwilę…</string>
 </resources>
