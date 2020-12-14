@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".couponActivity">
+    tools:context=".couponActivity"
+    android:background="@drawable/discount">
 
     <WebView
         android:layout_width="match_parent"
@@ -20,7 +21,7 @@
         android:text="Uzyskaj kod rabatowy!"
         android:textAlignment="center"
         android:textColor="#F60B0B"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +35,7 @@
         android:text="Wystarczy, że rozwiążesz kilka zadań. Za każde zadanie otrzymasz określoną liczbę rabatu! Maksymalna ilość rabatu to 8%"
         android:textAlignment="center"
         android:textColor="#0E0B0B"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView28" />
@@ -46,6 +48,7 @@
         android:layout_marginTop="10dp"
         android:text="Zadanie 1 - Java"
         android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
@@ -57,6 +60,7 @@
         android:layout_marginTop="10dp"
         android:text="Kto stworzył język Java? (rabat 2%) 1 próba"
         android:textColor="#000000"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView37" />
@@ -68,9 +72,10 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Full name"
         android:enabled="true"
+        android:hint="Full name"
         android:inputType="textPersonName"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
@@ -82,6 +87,7 @@
         android:layout_marginTop="15dp"
         android:text="Zadanie 2 - Zgaduj zgadula"
         android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/javaQuestion" />
 
@@ -92,6 +98,7 @@
         android:layout_marginTop="8dp"
         android:text="Musisz trafić na odpowiednią liczbę (Pula numerów 1-10). Uwaga masz tylko 3 próby! \n(rabat: 1-wsze zgadnięcie 6%. 2-gie 4%, 3-cie 2%)"
         android:textColor="#000000"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,6 +113,7 @@
         android:ems="10"
         android:hint="Your no"
         android:inputType="number"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
@@ -116,18 +124,19 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:hint="Hint"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
     <TextView
         android:id="@+id/textView46"
-        android:layout_width="117dp"
-        android:layout_height="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="40dp"
         android:text="Suma rabatu: "
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numberQuestion" />
@@ -139,6 +148,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="72dp"
         android:hint="Summarize discount"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/percentDiscount" />
 
@@ -147,9 +157,12 @@
         android:layout_width="351dp"
         android:layout_height="43dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/gradient"
         android:onClick="goToMenuRestaurant"
-        android:text="Przejdź do menu"
+        android:text="@string/goToMenuRestaurant"
         android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
@@ -162,6 +175,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         android:hint="Answer question"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
@@ -171,9 +185,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="32dp"
+        android:background="@drawable/gradient"
         android:onClick="questions"
-        android:text="Sprawdź odpowiedzi"
+        android:text="@string/checkQuestion"
         android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView46" />
 
@@ -184,6 +201,7 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="20dp"
         android:hint="how much have discount"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hintQuestion" />
 

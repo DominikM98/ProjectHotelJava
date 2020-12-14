@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".createReservationLoginActivity">
+    tools:context=".createReservationLoginActivity"
+    android:background="@drawable/reservation">
 
     <WebView
         android:layout_width="match_parent"
@@ -13,10 +14,12 @@
         tools:ignore="MissingConstraints" />
 
     <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-        android:id="@+id/android_material_design_spinner4"
+        android:id="@+id/android_material_design_spinner3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="12sp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:hint="Wybierz ilość pokoi"
@@ -30,8 +33,9 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:text="Wybierz ilość pokoi:"
-        android:textColor="#090000"
-        android:textSize="18sp"
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/android_material_design_spinner" />
 
@@ -39,22 +43,25 @@
         android:id="@+id/textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="127dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
+        android:fontFamily="@font/lemonada_semibold"
         android:text="Wybierz date wyjazdu: "
-        android:textColor="#0E0101"
-        android:textSize="18sp"
+        android:textColor="#090101"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/android_material_design_spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/android_material_design_spinner4" />
 
     <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-        android:id="@+id/android_material_design_spinner3"
+        android:id="@+id/android_material_design_spinner4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:hint="Wybierz typ pokoju: "
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
@@ -62,7 +69,9 @@
         android:id="@+id/android_material_design_spinner2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="12sp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:hint="Wybierz ilość dzieci"
@@ -72,10 +81,11 @@
     <TextView
         android:id="@+id/nameText"
         android:layout_width="140dp"
-        android:layout_height="26dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:text="Imię:"
+        android:fontFamily="@font/lemonada_semibold"
         android:textColor="#090101"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +98,8 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:text="Nazwisko: "
-        android:textColor="#070000"
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -103,6 +114,9 @@
         android:hint="Imię"
         android:inputType="textPersonName"
         android:maxLength="20"
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameText" />
 
@@ -115,6 +129,9 @@
         android:ems="10"
         android:hint="Nazwisko"
         android:inputType="textPersonName"
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/surnameText" />
 
@@ -122,10 +139,12 @@
         android:id="@+id/android_material_design_spinner"
         android:layout_width="191dp"
         android:layout_height="44dp"
-
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
+        android:fontFamily="@font/lemonada_semibold"
         android:hint="Wybierz ilość dorosłych"
+        android:textColor="#090101"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/howMuchText" />
 
@@ -136,8 +155,9 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:text="Wybierz ilość dorosłych:"
-        android:textColor="#000000"
-        android:textSize="18sp"
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameView" />
 
@@ -148,20 +168,22 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
         android:text="Wybierz ilość dzieci:"
-        android:textColor="#090000"
-        android:textSize="18sp"
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/surnameView" />
 
     <TextView
         android:id="@+id/textView32"
         android:layout_width="170dp"
-        android:layout_height="24dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
         android:text="Typ pokoju: "
-        android:textColor="#090000"
-        android:textSize="18sp"
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/android_material_design_spinner2" />
 
@@ -172,8 +194,9 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:text="Wybierz date przyjazdu: "
-        android:textColor="#0E0101"
-        android:textSize="18sp"
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/android_material_design_spinner3" />
 
@@ -186,6 +209,9 @@
         android:ems="10"
         android:hint="Data przyjazdu"
         android:inputType="textPersonName"
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
@@ -198,6 +224,9 @@
         android:ems="10"
         android:hint="Data wyjazdu"
         android:inputType="textPersonName"
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
@@ -208,8 +237,9 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:text="Czas przyjazdu:"
-        android:textColor="#070000"
-        android:textSize="18sp"
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/arrival" />
 
@@ -222,17 +252,23 @@
         android:ems="10"
         android:hint="+/- czasu przyjazdu"
         android:inputType="textPersonName"
+        android:fontFamily="@font/lemonada_semibold"
+        android:textColor="#090101"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView35" />
 
     <Button
         android:id="@+id/sendButton"
-        android:layout_width="234dp"
-        android:layout_height="42dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
         android:layout_marginTop="40dp"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/lemonada_semibold"
         android:onClick="checkIsEmpty"
-        android:text="Rezerwuje"
+        android:text="@string/sendButton"
         android:textAllCaps="false"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeArrival" />

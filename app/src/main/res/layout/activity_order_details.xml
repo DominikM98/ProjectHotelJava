@@ -31,6 +31,7 @@
         android:layout_marginEnd="49dp"
         android:text="Zamówienie"
         android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +44,12 @@
         android:layout_marginStart="26dp"
         android:layout_marginTop="33dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/order"
+        android:fontFamily="@font/annie_use_your_telescope"
         android:hint="Twoje zamówienie"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -73,26 +79,34 @@
 
     <Button
         android:id="@+id/sendButton"
-        android:layout_width="109dp"
+        android:layout_width="150dp"
         android:layout_height="58dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/gradient"
         android:onClick="sendOrder"
-        android:text="Zamów"
+        android:text="@string/sendButton2"
         android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/priceView" />
 
     <Button
         android:id="@+id/paymentButton"
-        android:layout_width="127dp"
+        android:layout_width="200dp"
         android:layout_height="58dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/gradient"
         android:onClick="payForFood"
-        android:text="Zapłać i zamów"
+        android:text="@string/paymentButton2"
         android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/sendButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView

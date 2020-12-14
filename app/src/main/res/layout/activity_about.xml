@@ -109,7 +109,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/gradient"
         android:fontFamily="@font/arsenal"
-        android:text="Podsumowanie"
+        android:text="@string/submitButton"
         android:textAllCaps="false"
         android:textSize="24sp"
         android:textStyle="bold"
