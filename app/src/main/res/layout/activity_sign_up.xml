@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".SignUpActivity">
 
     <WebView
         android:layout_width="match_parent"
@@ -49,46 +48,17 @@
         app:layout_constraintTop_toBottomOf="@+id/loginText" />
 
     <Button
-        android:id="@+id/signInButton"
+        android:id="@+id/createAccountButtonButton"
         android:layout_width="270dp"
         android:layout_height="51dp"
         android:layout_marginTop="32dp"
-        android:onClick="signIn"
-        android:text="Zaloguj się"
+        android:onClick="signUp"
+        android:text="Utwórz konto"
         android:textAllCaps="false"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordText" />
-
-    <Button
-        android:id="@+id/forgotPassButton"
-        android:layout_width="270dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:onClick="forgotPassword"
-        android:text="Nie pamiętasz hasła?"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInButton" />
-
-    <Button
-        android:id="@+id/signUpButton"
-        android:layout_width="270dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="20dp"
-        android:onClick="createAccount"
-        android:text="Nie masz jeszcze konta?"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgotPassButton" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
