@@ -29,4 +29,5 @@
     <string name="main_askBtn">Ask a question</string>
     <string name="main_quit">Quit</string>
     <string name="wait">Wait a second…</string>
+    <string name="botInfo">Hi! This is an interactive offline bot. You can ask him a question about everything in the application. Just write a message below and send it by clicking on the letter button.</string>
 </resources>

@@ -6,4 +6,5 @@
     <string name="main_askBtn">Zadaj pytanie</string>
     <string name="main_quit">Wyjdz z aplikacji</string>
     <string name="wait">Poczekaj chwilę…</string>
+    <string name="botInfo">Cześć! To jest interaktywny bot offline. Możesz zadać mu pytanie o wszystkim na temat aplikacji.  Po prostu napisz wiadomść poniżej i wyślij klikając przycisk listu.</string>
 </resources>
