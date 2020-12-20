@@ -29,6 +29,7 @@ public class reservationActivity extends AppCompatActivity {
     //Action after pressing the button
     public void LogOut(View view) {
         Intent intent = new Intent(reservationActivity.this,MainActivity.class);
+        LoginActivity.loggedIn = false;
         startActivity(intent);
         Toast.makeText(getApplicationContext(),"Wylogowywanie się",Toast.LENGTH_SHORT).show();
     }

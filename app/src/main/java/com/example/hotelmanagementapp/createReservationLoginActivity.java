@@ -96,7 +96,7 @@ public class createReservationLoginActivity extends AppCompatActivity {
     //Drop-down menu for number of rooms
     private void howMuchRooms(){
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,rooms);
-        MaterialBetterSpinner betterSpinner = (MaterialBetterSpinner)findViewById(R.id.android_material_design_spinner3);
+        MaterialBetterSpinner betterSpinner = (MaterialBetterSpinner)findViewById(R.id.android_material_design_spinner4);
         betterSpinner.setAdapter(arrayAdapter);
     }
     //Arrival calendar
