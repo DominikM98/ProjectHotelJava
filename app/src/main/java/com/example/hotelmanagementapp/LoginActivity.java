@@ -86,10 +86,10 @@ public class LoginActivity extends AppCompatActivity {
                                 return;
                             }
                             //when login not found
-                            else{
+                            /*else{
                                 loggedIn = false;
                                 Toast.makeText(getApplicationContext(),"Nie ma takiego użytkownika",Toast.LENGTH_SHORT).show();
-                            }
+                            }*/
                         }
                     }
                     @Override
@@ -109,9 +109,7 @@ public class LoginActivity extends AppCompatActivity {
             login.setError("Wprowadź numer telefonu");
             if(TextUtils.isEmpty(passw)){
                 pass.setError("Wprowadź hasło");
-                return;
             }
-            return;
         }else if(login.length() < 9){
             login.setError("Numer jest za krótki");
         }else if(login.length() > 13){
