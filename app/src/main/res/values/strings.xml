@@ -30,8 +30,6 @@
     <string name="main_quit">Quit</string>
     <string name="wait">Wait a second…</string>
     <string name="botInfo">Hi! This is an interactive offline bot. You can ask him a question about everything in the application. Just write a message below and send it by clicking on the letter button.</string>
-    <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
-    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
     <string name="loginButton">Log In</string>
     <string name="reservationButton">New reservation</string>
     <string name="button2">Quit app</string>

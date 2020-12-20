@@ -19,6 +19,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="44dp"
         android:onClick="loginToApp"
+        android:background="@drawable/gradient"
         android:text="@string/loginButton"
         android:textAllCaps="false"
         android:textColor="#120000"
@@ -50,9 +51,11 @@
         android:layout_height="0dp"
         android:layout_marginTop="28dp"
         android:onClick="openChat"
+        android:background="@drawable/gradient"
         android:text="@string/main_askBtn"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reservationButton" />
@@ -81,5 +84,5 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservationButton" />
+        app:layout_constraintTop_toBottomOf="@+id/reservationButton2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
