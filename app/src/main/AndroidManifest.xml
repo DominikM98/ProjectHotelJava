@@ -6,6 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:screenOrientation="portrait"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -13,13 +14,7 @@
         <activity android:name=".paymentActivity" />
         <activity android:name=".createReservationLoginActivity" />
         <activity android:name=".OrderDetails" />
-        <activity android:name=".menu.AlcoholActivity" />
-        <activity android:name=".menu.DessertsActivity" />
-        <activity android:name=".menu.DrinksActivity" />
-        <activity android:name=".menu.PastaActivity" />
-        <activity android:name=".menu.DumplingsActivity" />
-        <activity android:name=".menu.MainDishesActivity" />
-        <activity android:name=".menu.SoupActivity" />
+        <activity android:name=".ChatActivity" />
         <activity android:name=".SnapActivity" />
         <activity android:name=".createReservationActivity" />
         <activity android:name=".attractionActivity" />
