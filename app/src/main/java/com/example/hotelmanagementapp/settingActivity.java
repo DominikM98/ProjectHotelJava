@@ -1,9 +1,9 @@
 package com.example.hotelmanagementapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
@@ -14,34 +14,56 @@ import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.RatingBar;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
-import java.text.DecimalFormat;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
-public class aboutActivity extends AppCompatActivity {
+public class settingActivity extends AppCompatActivity {
 
     WebView webView;
+    private Switch ligthDarkMode;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
-        //Find view by ID
-        final RatingBar reception = findViewById(R.id.receptionRatingBar);
-        final RatingBar restaurant = findViewById(R.id.restauraitionRatingBar);
-        final RatingBar app = findViewById(R.id.appRatingBar);
-        Button submit = findViewById(R.id.submitButton);
-        //Action after pressing the button
-        submit.setOnClickListener(new View.OnClickListener(){
+        setContentView(R.layout.activity_setting);
+        noInternet();
+        changeMode();
+    }
+
+    public void changeMode(){
+        if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+            setTheme(R.style.darkTheme);
+        }else{
+            setTheme(R.style.AppTheme);
+        }
+
+        ligthDarkMode = findViewById(R.id.lightDarkSwitch);
+        if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+            ligthDarkMode.setChecked(true);
+        }
+
+        ligthDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v){
-                String rating = "Rating: "+((reception.getRating()+restaurant.getRating()+app.getRating())/3);
-                Toast.makeText(getApplicationContext(),rating,Toast.LENGTH_LONG).show();
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    restartApp();
+                }else{
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    restartApp();
+                }
             }
         });
+    }
 
-        noInternet();
+    public void restartApp(){
+        Intent intent = new Intent(getApplicationContext(),settingActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     public void noInternet(){
@@ -74,5 +96,6 @@ public class aboutActivity extends AppCompatActivity {
             dialog.show();
         }
     }
+
 
 }

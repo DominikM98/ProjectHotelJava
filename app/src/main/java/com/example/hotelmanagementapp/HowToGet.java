@@ -1,7 +1,5 @@
 package com.example.hotelmanagementapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
@@ -14,32 +12,21 @@ import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.text.DecimalFormat;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class aboutActivity extends AppCompatActivity {
+public class HowToGet extends AppCompatActivity {
 
+    TextView addressView;
     WebView webView;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
-        //Find view by ID
-        final RatingBar reception = findViewById(R.id.receptionRatingBar);
-        final RatingBar restaurant = findViewById(R.id.restauraitionRatingBar);
-        final RatingBar app = findViewById(R.id.appRatingBar);
-        Button submit = findViewById(R.id.submitButton);
-        //Action after pressing the button
-        submit.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                String rating = "Rating: "+((reception.getRating()+restaurant.getRating()+app.getRating())/3);
-                Toast.makeText(getApplicationContext(),rating,Toast.LENGTH_LONG).show();
-            }
-        });
+    protected void onCreate(Bundle savedInstance){
+        super.onCreate(savedInstance);
+        setContentView(R.layout.activity_how_to_get);
+
+        addressView = findViewById(R.id.addressView);
+        addressView.setText("Ulica: Aleje Jana Pawła II 1 - wjazd od strony Błonie\nMiasto: Tarnów\nWojewództwo: Małopolskie");
 
         noInternet();
     }
@@ -74,5 +61,4 @@ public class aboutActivity extends AppCompatActivity {
             dialog.show();
         }
     }
-
 }

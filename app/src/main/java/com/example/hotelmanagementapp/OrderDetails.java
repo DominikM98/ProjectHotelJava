@@ -28,7 +28,7 @@ public class OrderDetails extends AppCompatActivity {
     //Declaration of variables
 
     TextView order,priceView,sum,finalSummarizePrice;
-    String bill, allDisc,f;
+    String bill, allDisc;
     Double finalPrice,disc,finalRebate,priceDiscount;
     WebView webView;
 
@@ -47,7 +47,7 @@ public class OrderDetails extends AppCompatActivity {
         finalPrice = bundle.getDouble("Price ");
         allDisc = bundle.getString("Discount");
         //Set text
-        order.setText(bill);
+        order.setText("\n"+bill);
         priceView.setText(finalPrice.toString()+" zł");
         sum.setText(allDisc);
         checkIsNull();

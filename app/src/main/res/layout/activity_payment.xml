@@ -26,9 +26,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:background="@drawable/gradient"
         android:onClick="goToMenu"
-        android:text="Wyjdź do menu"
+        android:text="@string/menuButton"
         android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardform" />

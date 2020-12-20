@@ -35,28 +35,28 @@ public class SnapActivity extends AppCompatActivity {
     public void addToList(View view){
         //Action after pressing the button
         if(view == findViewById(R.id.tatarButton)){
-            choices = choices+"Tatar \n";
+            choices = choices+"\t\t\t Tatar \n";
             price = price+15.00;
         }else if(view == findViewById(R.id.pastaButton)){
-            choices = choices+"Pasta z pieczonej dyni z curry \n";
+            choices = choices+"\t\t\t Pasta z pieczonej dyni z curry \n";
             price = price+13.00;
         }else if(view == findViewById(R.id.schabowyButton)){
-            choices = choices+"Schabowy z ziemniakami i mizerią \n";
+            choices = choices+"\t\t\t Schabowy z ziemniakami i mizerią \n";
             price = price+21.00;
         }else if(view == findViewById(R.id.rosolButton)){
-            choices = choices+"Rosół z makaronem \n";
+            choices = choices+"\t\t\t Rosół z makaronem \n";
             price = price+12.00;
         }else if(view == findViewById(R.id.grillButton)){
-            choices = choices+"Grillowane mięsa z frytkami \n";
+            choices = choices+"\t\t\t Grillowane mięsa z frytkami \n";
             price = price+24.50;
         }else if(view == findViewById(R.id.sernikButton)){
-            choices = choices+"Sernik z lodami waniliowymi \n";
+            choices = choices+"\t\t\t Sernik z lodami waniliowymi \n";
             price = price+11.95;
         }else if(view == findViewById(R.id.pepsiButton)){
-            choices = choices+"Pepsi/7up/Mirinda 0.3ml \n";
+            choices = choices+"\t\t\t Pepsi/7up/Mirinda 0.3ml \n";
             price = price+7.00;
         }else if(view == findViewById(R.id.jackButton)){
-            choices = choices+"Jack Daniels 0.4cl \n";
+            choices = choices+"\t\t\t Jack Daniels 0.4cl \n";
             price = price+15.00;
         }
     }

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".attractionActivity">
+    tools:context=".attractionActivity"
+    android:background="@drawable/spa">
 
     <WebView
         android:layout_width="match_parent"
@@ -16,10 +17,14 @@
         android:id="@+id/toyDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
+        android:background="@drawable/gradient"
         android:onClick="deleteAttraction"
-        android:text="Usuń"
+        android:text="@string/toyDelete"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/toyButton"
         app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
@@ -27,10 +32,15 @@
         android:id="@+id/cinemaDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
+        android:background="@drawable/gradient"
         android:onClick="deleteAttraction"
-        android:text="Usuń"
+        android:text="@string/cinemaDelete"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/cinemaButton"
         app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
@@ -38,10 +48,14 @@
         android:id="@+id/poolDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
+        android:background="@drawable/gradient"
         android:onClick="deleteAttraction"
-        android:text="Usuń"
+        android:text="@string/poolDelete"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/poolButton"
         app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
@@ -49,10 +63,15 @@
         android:id="@+id/saunaDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
+        android:background="@drawable/gradient"
         android:onClick="deleteAttraction"
-        android:text="Usuń"
+        android:text="@string/saunaDelete"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/saunaButton"
         app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
@@ -62,9 +81,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
+        android:fontFamily="@font/courgette"
         android:text="Kino: (Cena 13.48 zł/film)"
         android:textColor="#0C0101"
-        android:textSize="18sp"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toyHour" />
 
@@ -76,6 +97,10 @@
         android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="number"
+        android:fontFamily="@font/courgette"
+        android:textColor="#0C0101"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
@@ -83,12 +108,17 @@
         android:id="@+id/cinemaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
-        android:text="Dodaj"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
+        android:text="@string/cinemaButton"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toyButton" />
+        app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
     <TextView
         android:id="@+id/textView39"
@@ -96,9 +126,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
+        android:fontFamily="@font/courgette"
         android:text="Mini przedszkole/plac zabaw: (Cena 0.00 zł)"
         android:textColor="#0C0101"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/poolHour" />
 
@@ -110,6 +142,10 @@
         android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="number"
+        android:fontFamily="@font/courgette"
+        android:textColor="#0C0101"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
@@ -119,9 +155,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
+        android:fontFamily="@font/courgette"
         android:text="Basen: (Cena 31.40 zł/h)"
         android:textColor="#0C0101"
-        android:textSize="18sp"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spaHour" />
 
@@ -129,23 +167,33 @@
         android:id="@+id/toyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
-        android:text="Dodaj"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
+        android:text="@string/toyButton"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/poolButton" />
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
     <Button
         android:id="@+id/poolButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
-        android:text="Dodaj"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
+        android:text="@string/poolButton"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spaButton" />
+        app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
     <EditText
         android:id="@+id/poolHour"
@@ -155,6 +203,10 @@
         android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="number"
+        android:fontFamily="@font/courgette"
+        android:textColor="#0C0101"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
@@ -164,9 +216,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
+        android:fontFamily="@font/courgette"
         android:text="SPA: (Cena 100.00 zł/h)"
         android:textColor="#0C0101"
-        android:textSize="18sp"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/saunaHour" />
 
@@ -174,12 +228,17 @@
         android:id="@+id/spaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
-        android:text="Dodaj"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
+        android:text="@string/spaButton"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/saunaButton" />
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
     <EditText
         android:id="@+id/spaHour"
@@ -189,6 +248,10 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="number"
+        android:fontFamily="@font/courgette"
+        android:textColor="#0C0101"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
@@ -199,8 +262,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Sauna: (Cena 15.00 zł/h)"
+        android:fontFamily="@font/courgette"
         android:textColor="#0C0101"
-        android:textSize="18sp"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -212,6 +277,10 @@
         android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="number"
+        android:fontFamily="@font/courgette"
+        android:textColor="#0C0101"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
@@ -219,12 +288,17 @@
         android:id="@+id/saunaButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
-        android:text="Dodaj"
+        android:text="@string/saunaButton"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
     <TextView
         android:id="@+id/textView44"
@@ -233,8 +307,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Cena razem: "
-        android:textColor="#000000"
-        android:textSize="18sp"
+        android:fontFamily="@font/courgette"
+        android:textColor="#0C0101"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cinemaHour" />
 
@@ -245,6 +321,10 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="100dp"
         android:hint="0.00 zł"
+        android:fontFamily="@font/courgette"
+        android:textColor="#0C0101"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cinemaButton" />
 
@@ -252,10 +332,15 @@
         android:id="@+id/spaDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
+        android:background="@drawable/gradient"
         android:onClick="deleteAttraction"
-        android:text="Usuń"
+        android:text="@string/spaDelete"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/spaButton"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
@@ -265,10 +350,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="80dp"
+        android:background="@drawable/gradient"
         android:enabled="false"
         android:onClick="payForAttraction"
-        android:text="Zapłać"
+        android:text="@string/paymentButton"
         android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/summarizePrice" />
 

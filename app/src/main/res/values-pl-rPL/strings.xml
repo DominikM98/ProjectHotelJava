@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HotelManagementApp</string>
+    <string name="loginButton">Zaloguj się</string>
+    <string name="reservationButton">Nowa rezerwacja</string>
+    <string name="button2">Wyjdź z aplikacji</string>
+    <string name="sendButton">Rezerwuję</string>
+    <string name="signInButton">Zaloguj się</string>
+    <string name="forgotPassButton">Przypomnij hasło</string>
+    <string name="addReservation">Nowa rezerwacja</string>
+    <string name="attraction">Dostępne atrakcje</string>
+    <string name="couponButton">Kupon rabatowy</string>
+    <string name="restaurant">Restauracja</string>
+    <string name="aboutUs">O nas</string>
+    <string name="signOut">Wyloguj się</string>
+    <string name="saunaDelete">Usuń</string>
+    <string name="saunaButton">Dodaj</string>
+    <string name="spaDelete">Usuń</string>
+    <string name="spaButton">Dodaj</string>
+    <string name="poolDelete">Usuń</string>
+    <string name="poolButton">Dodaj</string>
+    <string name="toyDelete">Usuń</string>
+    <string name="toyButton">Dodaj</string>
+    <string name="cinemaDelete">Usuń</string>
+    <string name="cinemaButton">Dodaj</string>
+    <string name="paymentButton">Zapłać</string>
+    <string name="menuButton">Zapłać</string>
+    <string name="submitButton">Podsumowanie</string>
+    <string name="button">Oceń nas</string>
+    <string name="button3">Jak dojechać?</string>
+    <string name="button4">Kontakt z działami</string>
+    <string name="checkQuestion">Sprawdź odpowiedzi</string>
+    <string name="goToMenuRestaurant">Idź do restauracji</string>
+    <string name="sendButton2">Zamów</string>
+    <string name="paymentButton2">Zapłać i zamów</string>
+    <string name="addButton">Dodaj</string>
+    <string name="checkButton">Zobacz zamówienie</string>
+    <string name="noInternetButton">Spróbuj ponownie</string>
+</resources>

@@ -34,7 +34,7 @@ public class reservationActivity extends AppCompatActivity {
     }
     //Action after pressing the button
     public void aboutUs(View view) {
-        Intent intent = new Intent(reservationActivity.this,aboutActivity.class);
+        Intent intent = new Intent(reservationActivity.this,Contact.class);
         startActivity(intent);
         Toast.makeText(getApplicationContext(),"Ładowanie...",Toast.LENGTH_SHORT).show();
     }
@@ -62,6 +62,13 @@ public class reservationActivity extends AppCompatActivity {
         startActivity(intent);
         Toast.makeText(getApplicationContext(),"Ładowanie...",Toast.LENGTH_SHORT).show();
     }
+
+    public void goToSetting(View view){
+        Intent intent = new Intent(reservationActivity.this,settingActivity.class);
+        startActivity(intent);
+        Toast.makeText(getApplicationContext(),"Ustawienia",Toast.LENGTH_SHORT).show();
+    }
+
     public void noInternet(){
         webView = findViewById(R.id.noInternet);
 

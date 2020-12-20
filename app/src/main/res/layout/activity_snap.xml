@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SnapActivity">
+    tools:context=".SnapActivity"
+    android:background="@drawable/menu">
 
     <WebView
         android:layout_width="match_parent"
@@ -19,8 +20,9 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="298dp"
         android:text="Sernik z lodami waniliowymi"
-        android:textColor="#0E0202"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tatarButton" />
 
@@ -31,8 +33,9 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="300dp"
         android:text="11.95 zł"
-        android:textColor="#070000"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -43,20 +46,24 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="300dp"
         android:text="Jack Daniels 0.4cl"
-        android:textColor="#0E0202"
+        android:textColor="#FFFFFF"
         android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rosolButton" />
 
     <Button
         android:id="@+id/sernikButton"
-        android:layout_width="87dp"
+        android:layout_width="100dp"
         android:layout_height="39dp"
         android:layout_marginTop="300dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
-        android:text="Dodaj"
+        android:text="@string/addButton"
         android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -67,8 +74,9 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="308dp"
         android:text="24.50 zł"
-        android:textColor="#070000"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -79,8 +87,9 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="320dp"
         android:text="Grillowane mięsa z frytkami"
-        android:textColor="#0E0202"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,44 +100,54 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="295dp"
         android:text="Pepsi/7up/Mirinda 0.3ml"
-        android:textColor="#0E0202"
+        android:textColor="#FFFFFF"
         android:textSize="19sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pastaButton" />
 
     <Button
         android:id="@+id/pepsiButton"
-        android:layout_width="87dp"
+        android:layout_width="100dp"
         android:layout_height="39dp"
         android:layout_marginTop="300dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
-        android:text="Dodaj"
+        android:text="@string/addButton"
         android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <Button
         android:id="@+id/grillButton"
-        android:layout_width="87dp"
+        android:layout_width="100dp"
         android:layout_height="39dp"
         android:layout_marginTop="308dp"
-        android:layout_marginEnd="20dp"
-        android:text="Dodaj"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
+        android:text="@string/addButton"
         android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/jackButton"
-        android:layout_width="87dp"
+        android:layout_width="100dp"
         android:layout_height="39dp"
         android:layout_marginTop="305dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
-        android:text="Dodaj"
+        android:text="@string/addButton"
         android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -139,8 +158,9 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="300dp"
         android:text="7.00 zł"
-        android:textColor="#070000"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -151,8 +171,9 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="305dp"
         android:text="15.00 zł"
-        android:textColor="#070000"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -165,6 +186,7 @@
         android:text="Schabowy z ziemniakami i mizerią"
         android:textColor="#0E0202"
         android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rosolButton" />
 
@@ -177,18 +199,22 @@
         android:text="12.00 zł"
         android:textColor="#070000"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <Button
         android:id="@+id/rosolButton"
-        android:layout_width="87dp"
+        android:layout_width="100dp"
         android:layout_height="39dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
-        android:text="Dodaj"
+        android:text="@string/addButton"
         android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -201,18 +227,22 @@
         android:text="Rosół z makaronem"
         android:textColor="#0E0202"
         android:textSize="19sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pastaButton" />
 
     <Button
         android:id="@+id/schabowyButton"
-        android:layout_width="87dp"
+        android:layout_width="100dp"
         android:layout_height="39dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
-        android:text="Dodaj"
+        android:text="@string/addButton"
         android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -225,6 +255,7 @@
         android:text="21.00 zł"
         android:textColor="#070000"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -237,6 +268,7 @@
         android:text="Pasta z pieczonej dyni z curry"
         android:textColor="#0E0202"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tatarButton" />
 
@@ -249,30 +281,37 @@
         android:text="13.00 zł"
         android:textColor="#070000"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
         android:id="@+id/tatarButton"
-        android:layout_width="87dp"
+        android:layout_width="100dp"
         android:layout_height="39dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="28dp"
-        android:text="Dodaj"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
+        android:text="@string/addButton"
         android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/pastaButton"
-        android:layout_width="87dp"
+        android:layout_width="100dp"
         android:layout_height="39dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/gradient"
         android:onClick="addToList"
-        android:text="Dodaj"
+        android:text="@string/addButton"
         android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -285,6 +324,7 @@
         android:text="Tradycyjny tatar wołowy"
         android:textColor="#0E0202"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -297,18 +337,22 @@
         android:text="15.00 zł"
         android:textColor="#070000"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/checkButton"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="140dp"
+        android:background="@drawable/gradient"
         android:onClick="placeOrder"
-        android:text="Zobacz zamówienie"
+        android:text="@string/checkButton"
         android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 

@@ -3,12 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/hotel_inside">
 
     <WebView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/noInternet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -16,20 +20,23 @@
         android:layout_width="295dp"
         android:layout_height="55dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/courgette"
         android:onClick="coupon"
-        android:text="Kupon rabatowy"
+        android:text="@string/couponButton"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/attraction" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="160dp"
-        android:layout_height="255dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="151dp"
+        android:layout_height="244dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hotel_java" />
@@ -37,12 +44,16 @@
     <Button
         android:id="@+id/addReservation"
         android:layout_width="295dp"
-        android:layout_height="0dp"
+        android:layout_height="55dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/courgette"
         android:onClick="newReservation"
-        android:text="Nowa rezerwacja"
+        android:text="@string/addReservation"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textColor="#070101"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -52,10 +63,13 @@
         android:layout_width="295dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/courgette"
         android:onClick="attraction"
-        android:text="Dostępne atrakcje"
+        android:text="@string/attraction"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addReservation" />
@@ -65,10 +79,13 @@
         android:layout_width="295dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/courgette"
         android:onClick="goToRestaurant"
-        android:text="Restauracja"
+        android:text="@string/restaurant"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/couponButton" />
@@ -78,10 +95,13 @@
         android:layout_width="295dp"
         android:layout_height="55dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/courgette"
         android:onClick="aboutUs"
-        android:text="O nas"
+        android:text="@string/aboutUs"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/restaurant" />
@@ -91,11 +111,26 @@
         android:layout_width="295dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/courgette"
         android:onClick="LogOut"
-        android:text="Wyloguj się"
+        android:text="@string/signOut"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/aboutUs" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:onClick="goToSetting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noInternet"
+        app:srcCompat="@drawable/ic_settings_black_24dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
