@@ -27,13 +27,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Objects;
 
-/** Nie do końca poprawne logowanie **/
+/** Poprawione logowanie **/
 
 public class LoginActivity extends AppCompatActivity {
     TextView login, pass;
     WebView webView;
     DatabaseReference dbRef;
-    boolean loggedIn;
+    static boolean loggedIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         noInternet();
         dbRef = FirebaseDatabase.getInstance().getReference().child("User");
+        loggedIn = false;
     }
 
     //Action after pressing the button
@@ -68,19 +69,26 @@ public class LoginActivity extends AppCompatActivity {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                             User user = snapshot.getValue(User.class);
-                            if(user.getLogin().equals(login.getText().toString())){
-                                System.out.println("---------------------------LOGIN MATCHED-------------------- "+snapshot.getKey());
-                                if(pass.getText().toString().equals(user.getPassword())){
+                            //if login in database
+                            if(user.getLogin().equals(login.getText().toString().trim())){
+                                //if password matches start new activity
+                                if(user.getPassword().equals(pass.getText().toString().trim())){
                                     loggedIn = true;
-                                    System.out.println("---------------------------USER LOGGED IN-------------------- ");
-                                }else{
-                                    loggedIn = false;
-                                    System.out.println("---------------------------WRONG PASSWORD-------------------- ");
+                                    start();
+                                    Toast.makeText(getApplicationContext(),"Logowanie udane!",Toast.LENGTH_SHORT).show();
                                 }
+                                //otherwise notify about incorrect login or password
+                                else{
+                                    loggedIn = false;
+                                    Toast.makeText(getApplicationContext(),"Błędne hasło!",Toast.LENGTH_SHORT).show();
+                                }
+                                //return when login was found and action was executed
                                 return;
-                            }else{
+                            }
+                            //when login not found
+                            else{
                                 loggedIn = false;
-                                System.out.println("---------------------------WRONG KEY-------------------- ");
+                                Toast.makeText(getApplicationContext(),"Nie ma takiego użytkownika",Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
@@ -92,7 +100,6 @@ public class LoginActivity extends AppCompatActivity {
 
     //Action after pressing the button
     public void signIn(View view) {
-        System.out.println("---------------------------NEW RUN-------------------- ");
         login = findViewById(R.id.loginText);
         pass = findViewById(R.id.passwordText);
         String str = login.getText().toString();
@@ -113,14 +120,7 @@ public class LoginActivity extends AppCompatActivity {
             pass.setError("Minimum 8 liter");
         }else{
             tryLogin();
-            if(loggedIn){
-                start();
-                Toast.makeText(getApplicationContext(),"Logowanie udane!",Toast.LENGTH_SHORT).show();
-            }else{
-                Toast.makeText(getApplicationContext(),"Błędny login lub hasło!",Toast.LENGTH_SHORT).show();
-            }
         }
-        System.out.println("-------------END--------------");
     }
     public void start() {
         Intent intent = new Intent(LoginActivity.this,reservationActivity.class);
