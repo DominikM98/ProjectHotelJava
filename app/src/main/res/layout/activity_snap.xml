@@ -21,7 +21,7 @@
         android:layout_marginTop="298dp"
         android:text="Sernik z lodami waniliowymi"
         android:textColor="#0E0202"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tatarButton" />
@@ -88,7 +88,7 @@
         android:layout_marginTop="320dp"
         android:text="Grillowane mięsa z frytkami"
         android:textColor="#0E0202"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -101,7 +101,7 @@
         android:layout_marginTop="295dp"
         android:text="Pepsi/7up/Mirinda 0.3ml"
         android:textColor="#0E0202"
-        android:textSize="19sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pastaButton" />
@@ -226,7 +226,7 @@
         android:layout_marginTop="1dp"
         android:text="Rosół z makaronem"
         android:textColor="#0E0202"
-        android:textSize="19sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pastaButton" />
@@ -267,7 +267,7 @@
         android:layout_marginTop="1dp"
         android:text="Pasta z pieczonej dyni z curry"
         android:textColor="#0E0202"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tatarButton" />
@@ -323,7 +323,7 @@
         android:layout_marginTop="16dp"
         android:text="Tradycyjny tatar wołowy"
         android:textColor="#0E0202"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

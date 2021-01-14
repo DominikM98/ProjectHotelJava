@@ -12,31 +12,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/no_internet" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Brak internetu!"
+        android:text="@string/noInternet"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sprawdź połaczenie!"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
         android:layout_marginTop="10dp"
-        android:textStyle="bold"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        android:text="@string/checkCon"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
     <Button
+        android:id="@+id/noInternetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/noInternetButton"
-        android:text="Spróbuj ponownie"
-        android:textAllCaps="false"
         android:layout_marginTop="20dp"
         android:background="@android:drawable/bottom_bar"
+        android:text="@string/noInternetButton"
+        android:textAllCaps="false"
         android:textColor="@android:color/white" />
 
 
