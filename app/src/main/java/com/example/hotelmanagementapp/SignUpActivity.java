@@ -113,13 +113,13 @@ public class SignUpActivity extends AppCompatActivity {
             dbReff.child(String.valueOf(maxID+1)).setValue(user);
              */
 
-            String url = "http://localhost:1485/api/users/add";
+            String url = "http://10.0.2.2:1485/api/users/add";
             MediaType JSON = MediaType.parse("application/json;charset=utf-8");
             OkHttpClient client = new OkHttpClient();
             JSONObject jsonObject = new JSONObject();
             try{
-                jsonObject.put("numberPhone",login);
-                jsonObject.put("password",pass);
+                jsonObject.put("numberPhone",lgn);
+                jsonObject.put("password",psw);
             }
             catch(JSONException je){
                 je.printStackTrace();
@@ -142,13 +142,13 @@ public class SignUpActivity extends AppCompatActivity {
                         throw new IOException("Unexpected code " + response);
                     }
                     else{
-                        System.out.println(response);
+                        start();
                     }
                 }});
 
 
-            start();
-            Toast.makeText(getApplicationContext(),"Konto zostało utworzone",Toast.LENGTH_SHORT).show();
+
+            //Toast.makeText(getApplicationContext(),"Konto zostało utworzone",Toast.LENGTH_SHORT).show();
         }
 
     }
