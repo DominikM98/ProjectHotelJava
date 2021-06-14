@@ -1,8 +1,8 @@
 package com.example.hotelmanagementapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -19,12 +20,25 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+import okio.BufferedSink;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -33,6 +47,7 @@ public class SignUpActivity extends AppCompatActivity {
     User user;
     DatabaseReference dbReff;
     long maxID = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,8 +86,8 @@ public class SignUpActivity extends AppCompatActivity {
 
 
     //onClick for sign up button
-    public void signUp(View view){
-
+    @RequiresApi(api = Build.VERSION_CODES.P)
+    public void signUp(View view) {
         login = findViewById(R.id.loginText);
         pass = findViewById(R.id.passwordText);
         String lgn = login.getText().toString();
@@ -92,10 +107,45 @@ public class SignUpActivity extends AppCompatActivity {
             pass.setError("Minimum 8 liter");
         }else{
 
-            // Dodawanie użytkownika do bazy
-
+            // Dodawanie użytkownika do bazy Firebase
+            /*
             user = new User(lgn, psw);
             dbReff.child(String.valueOf(maxID+1)).setValue(user);
+             */
+
+            String url = "http://localhost:1485/api/users/add";
+            MediaType JSON = MediaType.parse("application/json;charset=utf-8");
+            OkHttpClient client = new OkHttpClient();
+            JSONObject jsonObject = new JSONObject();
+            try{
+                jsonObject.put("numberPhone",login);
+                jsonObject.put("password",pass);
+            }
+            catch(JSONException je){
+                je.printStackTrace();
+            }
+            RequestBody body = RequestBody.create(JSON, jsonObject.toString());
+            Request request = new Request.Builder()
+                    .url(url)
+                    .post(body)
+                    .build();
+
+            client.newCall(request).enqueue(new Callback() {
+                @Override
+                public void onFailure(Call call, IOException e) {
+                    e.printStackTrace();
+                }
+
+                @Override
+                public void onResponse(Call call, final Response response) throws IOException {
+                    if (!response.isSuccessful()) {
+                        throw new IOException("Unexpected code " + response);
+                    }
+                    else{
+                        System.out.println(response);
+                    }
+                }});
+
 
             start();
             Toast.makeText(getApplicationContext(),"Konto zostało utworzone",Toast.LENGTH_SHORT).show();
