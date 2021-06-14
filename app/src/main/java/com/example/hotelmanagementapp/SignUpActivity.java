@@ -44,10 +44,11 @@ public class SignUpActivity extends AppCompatActivity {
 
     TextView login,pass;
     WebView webView;
+    /* Firebase stuff
     User user;
     DatabaseReference dbReff;
     long maxID = 0;
-
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +72,7 @@ public class SignUpActivity extends AppCompatActivity {
         }
         login.setText(l);
         pass.setText(p);
+        /* Firebase stuff
         dbReff = FirebaseDatabase.getInstance().getReference().child("User");
         dbReff.addValueEventListener(new ValueEventListener() {
             @Override
@@ -82,6 +84,7 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {}
         });
+         */
     }
 
 
@@ -106,12 +109,6 @@ public class SignUpActivity extends AppCompatActivity {
         }else if(psw.length() < 8){
             pass.setError("Minimum 8 liter");
         }else{
-
-            // Dodawanie użytkownika do bazy Firebase
-            /*
-            user = new User(lgn, psw);
-            dbReff.child(String.valueOf(maxID+1)).setValue(user);
-             */
 
             String url = "http://10.0.2.2:1485/api/users/add";
             MediaType JSON = MediaType.parse("application/json;charset=utf-8");
@@ -145,10 +142,12 @@ public class SignUpActivity extends AppCompatActivity {
                         start();
                     }
                 }});
-
-
-
             //Toast.makeText(getApplicationContext(),"Konto zostało utworzone",Toast.LENGTH_SHORT).show();
+
+            /* Firebase stuff
+            user = new User(lgn, psw);
+            dbReff.child(String.valueOf(maxID+1)).setValue(user);
+             */
         }
 
     }
